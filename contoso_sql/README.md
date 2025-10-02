@@ -58,7 +58,7 @@ Docker
 > docker stop pg_1
 
 `pg17 + cutom data volume location`  
-> `docker run -d --name pg_2 -p 5432:5432 -e POSTGRES_PASSWORD=postgres  -v C:\Users\username\wsl\vol_pg_2:/var/lib/postgresql/data postgres:17`
+> `docker run -d --name pg_2 -p 5432:5432 -e POSTGRES_PASSWORD=postgres -v C:\Users\username\wsl\vol_pg_2:/var/lib/postgresql/data postgres:17`   
 > docker stop pg_2  
 
 `pg18/latest`

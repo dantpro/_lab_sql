@@ -2,7 +2,7 @@
 
 lab contoso sql setup    
 
-WSL   
+Windows Features   
 ---
 
 > `--- for wsl`  
@@ -16,41 +16,56 @@ WSL
 >
 > Restart-Computer -Force  
 
-# wsl setup
-#
-wsl --status  
+WSL
+---
 
-# updgrade to wsl2
-wsl --update
-wsl --status  
+> `-- wsl setup`  
+>
+> wsl --status  
+>
+> `--- updgrade to wsl2`  
+> wsl --update  
+> wsl --status
 
-# install wsl/ubuntu
-wsl --install  
+> `-- install wsl ubuntu`  
+> wsl --install  
+> `user@ubuntu> sudo apt update`  
+> `user@ubuntu> sudo apt full-upgrade`  
 
-# wsl --install --distribution ubuntu
-# wsl -d ubuntu
-# wsl 
+> `--- wsl --install --distribution ubuntu`  
+> `--- wsl -d ubuntu`  
+> `--- wsl`
+ 
+> wsl --list  
+> wsl --list --online  
+> wsl --list --verbose  
+> wsl --shutdown  
 
-user@ubuntu> sudo apt update
-user@ubuntu> sudo apt full-upgrade
+> `--- wsl --set-default-version 2`    
+> `--- wsl --set-default ubuntu`
 
-wsl --list
-wsl --list --online
-wsl --list --verbose  
-wsl --shutdown  
+Docker
+---
 
-# wsl --set-default-version 2  
-# wsl --set-default ubuntu  
+> `Start-Process 'C:\Users\<username>\Downloads\Docker Desktop Installer.exe' -Wait -ArgumentList 'install', '--accept-license', '--backend=wsl-2'`
+  
 
-docker run hello-world
-docker ps -all
+> docker run hello-world  
+> docker ps --all  
 
-`pg17`
-docker run -d --name pg_1 -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres:17
+`pg17`  
+> docker run -d --name pg_1 -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres:17  
+> docker stop pg_1
 
-`pg17 + cutom data volume location`
-docker run -d --name pg_2 -p 5432:5432 -e POSTGRES_PASSWORD=postgres  -v c:\users\<username>\wsl\vol_pg_2:/var/lib/postgresql/data postgres:17
+`pg17 + cutom data volume location`  
+> docker run -d --name pg_2 -p 5432:5432 -e POSTGRES_PASSWORD=postgres  -v C:\Users\<username>\wsl\vol\pg_2:/var/lib/postgresql/data postgres:17
+> docker stop pg_2  
 
 `pg18/latest`
-docker run -d --name pg_3 -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:latest
+> docker run -d --name pg_3 -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:latest  
+
+---
+
+
+
 

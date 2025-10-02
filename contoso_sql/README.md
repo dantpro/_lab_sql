@@ -3,14 +3,14 @@
 lab contoso sql setup    
 
 ---
-> # for wsl
-> Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
-> #
-> # to wsl
-> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
-> #
-> # for docker desktop
-> Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -NoRestart
+> `# for wsl`  
+> `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart`  
+> `#`  
+> `# to wsl`  
+> `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart`  
+> `#`  
+> `# for docker desktop`  
+> `Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -NoRestart`  
 
 > Restart-Computer -Force
 

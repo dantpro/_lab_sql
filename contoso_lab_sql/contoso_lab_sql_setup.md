@@ -1,6 +1,6 @@
-# lab contoso sql
+# contoso lab sql setup
 
-lab contoso sql setup    
+contoso lab sql setup    
 
 Windows Features   
 ---

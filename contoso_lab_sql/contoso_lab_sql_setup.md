@@ -5,13 +5,13 @@ contoso lab sql setup
 Windows Features   
 ---
 
-> `--- for wsl`  
+> `-- for wsl`  
 > Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart  
 >
-> `--- to wsl`    
+> `-- to wsl`    
 > Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart  
 > 
-> `--- for docker desktop`  
+> `-- for docker desktop`  
 > Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -NoRestart  
 >
 > Restart-Computer -Force  
@@ -23,7 +23,7 @@ WSL
 >
 > wsl --status  
 >
-> `--- updgrade to wsl2`  
+> `-- updgrade to wsl2`  
 > wsl --update  
 > wsl --status
 
